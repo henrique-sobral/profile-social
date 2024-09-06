@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+:root {
+  --destaque: #4c9ce5;
+  --branco-card: #fafafa;
+  --branco-fundo: #f7f7f7;
+  --borda-profile: #e2e2e2;
+  --logo: #e6e6e6;
+  --botao: #f1f1f1;
+  --botao-letra: #333333;
+  --descricao: #746f6f;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+.foto-perfil {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--borda-profile);
+}
+.container {
+  background-color: var(--branco-fundo);
+  background-image: url(/src/img/henrique-sobral-logo-cinza.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  min-height: 100vh;
+  align-items: center;
+  place-content: center;
+}
+.container-grid {
+  display: grid;
+  background-color: var(--branco-card);
+  border: 1px solid var(--borda-profile);
+  justify-items: center;
+  padding: 50px;
+  gap: 20px;
+  border-radius: 8px;
+}
+.nome-e-cidade h1 {
+  color: var(--botao-letra);
+  font-size: 24px;
+  padding-bottom: 5px;
+}
+.nome-e-cidade p {
+  color: var(--destaque);
+  text-align: center;
+  font-weight: 500;
+}
+h2 {
+  font-size: 14px;
+  color: var(--descricao);
+  font-weight: 500;
+}
+.contatos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.contatos button {
+  color: var(--botao-letra);
+  font-weight: 600;
+  width: 250px;
+  background-color: var(--botao);
+  padding: 12px 50px;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.contatos button:hover {
+  background-color: var(--destaque);
+  color: var(--botao);
+  cursor: pointer;
+}
+.rodape {
+  text-align: center;
+  padding: 10px;
+}
+.rodape p {
+  font-size: 14px;
+}
+.rodape a {
+  color: #4c9ce5;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .container {
+    background-size: cover;
+  }
+}
